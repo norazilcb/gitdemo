@@ -15,6 +15,7 @@
             <br />
             Email:
             <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Email Address is not valid" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
             <br />
             <br />
             Subject:&nbsp; <asp:TextBox ID="txtSubject" runat="server"></asp:TextBox>
@@ -26,6 +27,8 @@
             <br />
             <asp:Button ID="btnSendEmail" runat="server" OnClick="btnSendEmail_Click" Text="Send" />
             <br />
+            <br />
+            <asp:Literal ID="litResult" runat="server"></asp:Literal>
             <br />
         </div>
     </form>
